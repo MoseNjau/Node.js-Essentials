@@ -110,3 +110,45 @@ textarea{
   font-size: 1.2em;
   cursor: pointer;
 }
+
+/* 404.css */
+
+body {
+  font-family: 'Your Preferred Font', sans-serif;
+  background-color: #f8f8f8;
+  color: #333;
+  margin: 0;
+}
+
+.not-found {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.not-found h1 {
+  font-size: 4em;
+  color: #555;
+}
+
+.not-found p {
+  font-size: 1.5em;
+  color: #777;
+}
+
+.not-found p.message {
+  font-size: 1.2em;
+  color: #888;
+}
+
+.not-found img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+.not-found img {
+  max-width: 50%; /* Set maximum width to prevent covering the whole page */
+  height: auto; /* Maintain aspect ratio */
+  display: block;
+  margin: 0 auto; /* Center the image horizontally */
+  margin-top: 20px; /* Add some top margin for spacing */
+}

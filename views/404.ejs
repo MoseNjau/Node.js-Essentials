@@ -1,13 +1,16 @@
+<!DOCTYPE html>
 <html lang="en">
-<%- include("./partials/head.ejs") %>
+  <%- include("./partials/head.ejs") %>
+  <body>
+    <%- include("./partials/nav.ejs") %>
 
-<body>
-  <%- include("./partials/nav.ejs") %>
+    <div class="not-found content">
+      <h1>404</h1>
+      <p>OOPS, Page Not Found )</p>
+      <p class="message">It seems like the page you are looking for does not exist.</p>
+      <img src="/404.png" alt="404 Image" class="error">
+    </div>
 
-  <div class="not-found content">
-    OOPS, page not found :)
-  </div>
-
-  <%- include("./partials/footer.ejs") %>
-</body>
+    <%- include("./partials/footer.ejs") %>
+  </body>
 </html>
