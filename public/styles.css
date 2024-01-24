@@ -14,30 +14,59 @@ p, h1, h2, h3, a, ul{
 }
 
 /* nav & footer styles */
-nav{
+nav {
+  background-color: #081d46;
+  color: white;
+  padding: 1rem;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 60px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #ddd;
-  text-transform: uppercase;
+  align-items: center;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-nav ul{
+
+nav .site-title {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  flex-direction: column;
+  align-items: flex-start; /* Adjust alignment as needed */
 }
-nav li{
-  list-style-type: none;
-  margin-left: 20px;
+
+nav .site-title a {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  margin-bottom: 5px; /* Adjust as needed */
 }
-nav h1{
-  font-size: 3em;
+
+nav .site-title p {
+  font-size: 0.8em;
+  color: #ccc;
+  margin-top: 0; /* Reset top margin to fix the sticking issue */
 }
-nav p, nav a{
-  color: #777;
-  font-weight: 300;
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
+
+nav li {
+  margin-right: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ffd700; /* Change to your desired hover color */
+}
+
 footer{
   color: #777;
   text-align: center;
@@ -88,12 +117,6 @@ body {
   margin: 0;
 }
 
-.nav {
-  background-color: #333;
-  padding: 1rem;
-  color: white;
-  text-align: center;
-}
 
 .blogs {
   max-width: 800px;
@@ -231,17 +254,6 @@ body {
   color: #333;
 }
 
-nav {
-  background-color: #081d46;
-  color: white;
-  padding: 1rem;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  margin-right: 1rem;
-}
 
 .about {
   max-width: 800px;
@@ -272,4 +284,20 @@ nav a {
   position: fixed;
   bottom: 0;
   width: 100%;
+}
+
+/* Star Rating Styles */
+.star-rating {
+  display: flex;
+  margin-top: 10px;
+}
+
+.fa-star {
+  font-size: 1.5em;
+  color: #ffd700; /* Golden yellow color for the star */
+  margin-right: 5px;
+}
+
+.fa-star.checked {
+  color: #ffac33; /* A slightly darker shade for checked stars */
 }

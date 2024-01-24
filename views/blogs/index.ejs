@@ -9,13 +9,20 @@
 
         <% if (blogs.length > 0) { %>
             <% blogs.forEach(blog => { %>
-                <a href="/blogs/<%- blog._id %>" class="single">
-                    <div class="blog-card">
+                <div class="blog-card">
+                    <a href="/blogs/<%- blog._id %>" class="single">
                         <h3 class="title"><%= blog.title %></h3>
-                        <p class="snippet"><%= blog.snippet %></p>
-                        <p class="date">Submitted on: <%= blog.createdAt.toLocaleDateString() %></p>
+                    </a>
+                    <p class="snippet"><%= blog.snippet %></p>
+                    <p class="date">Submitted on: <%= blog.createdAt.toLocaleDateString() %></p>
+
+                    <!-- Star Rating Section -->
+                    <div class="star-rating" data-blog-id="<%= blog._id %>" data-rating="<%= blog.rating %>">
+                        <% for (let i = 1; i <= 5; i++) { %>
+                            <i class="fas fa-star <%= i <= blog.rating ? 'checked' : '' %>" data-star-value="<%= i %>"></i>
+                        <% } %>
                     </div>
-                </a>
+                </div>
             <% }) %>
         <% } else { %>
             <div class="no-blogs">
@@ -26,5 +33,41 @@
     </div>
 
     <%- include('../partials/footer.ejs') %>
+
+    <script>
+        $(document).ready(function() {
+            // Click event for star ratings
+            $('.star-rating i').on('click', function() {
+                const blogId = $(this).closest('.star-rating').data('blog-id');
+                const starValue = $(this).data('star-value');
+    
+                // Send the updated rating to the server (you need to implement this part)
+                // For demonstration purposes, let's assume there's a hypothetical updateRating function
+                updateRating(blogId, starValue);
+    
+                // Update the UI to reflect the clicked star
+                $(this).addClass('checked').prevAll().addClass('checked');
+                $(this).nextAll().removeClass('checked');
+            });
+    
+            // This is a hypothetical function to update the rating on the server
+            function updateRating(blogId, rating) {
+                // Implement your server-side logic to update the rating for the specified blog
+                // You might want to use AJAX to send a request to the server
+                // Example:
+                // $.ajax({
+                //     url: '/updateRating',
+                //     method: 'POST',
+                //     data: { blogId, rating },
+                //     success: function(response) {
+                //         console.log('Rating updated successfully');
+                //     },
+                //     error: function(error) {
+                //         console.error('Error updating rating', error);
+                //     }
+                // });
+            }
+        });
+    </script>
 </body>
 </html>
