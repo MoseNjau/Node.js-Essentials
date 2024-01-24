@@ -81,6 +81,59 @@ h3{
   cursor: pointer;
   box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
 }
+/* styles.css */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+}
+
+.nav {
+  background-color: #333;
+  padding: 1rem;
+  color: white;
+  text-align: center;
+}
+
+.blogs {
+  max-width: 800px;
+  margin: 2rem auto;
+}
+
+.blog-card {
+  background-color: white;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.blog-card:hover {
+  transform: scale(1.02);
+}
+
+.title {
+  color: #333;
+}
+
+.snippet {
+  color: #555;
+}
+
+.date {
+  color: #777;
+  margin-top: 0.5rem;
+}
+
+.no-blogs {
+  text-align: center;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
 
 /* create styles */
 .create-blog form{
@@ -151,4 +204,72 @@ body {
   display: block;
   margin: 0 auto; /* Center the image horizontally */
   margin-top: 20px; /* Add some top margin for spacing */
+}
+
+/* about.css */
+.about {
+  max-width: 800px;
+  margin: 2rem auto;
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.about h2 {
+  color: #333;
+}
+
+.about p {
+  color: #555;
+  margin-bottom: 1rem;
+}
+/* styles.css */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+nav {
+  background-color: #081d46;
+  color: white;
+  padding: 1rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-right: 1rem;
+}
+
+.about {
+  max-width: 800px;
+  margin: 2rem auto;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.about h2 {
+  color: #007bff;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.about p {
+  color: #555;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.footer {
+  background-color: #007bff;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
